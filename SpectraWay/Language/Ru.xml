@@ -1,0 +1,280 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<DisplayStrings>
+  <DisplayString ElementID="SpectraWay.UiSettings">
+    <Name>Цвет</Name>
+  </DisplayString>
+  <DisplayString ElementID="SpectraWay.Intensity">
+    <Name>Инттенсивность</Name>
+  </DisplayString>
+  <DisplayString ElementID="SpectraWay.Wavelength">
+    <Name>Длина волны</Name>
+  </DisplayString>
+  <DisplayString ElementID="SpectraWay.ExceptionInfo">
+    <Name>Информация об исключении</Name>
+  </DisplayString>
+  <DisplayString ElementID="SpectraWay.CopyToClipboard">
+    <Name>Копировать</Name>
+  </DisplayString>
+  <DisplayString ElementID="SpectraWay.Close">
+    <Name>Закрыть</Name>
+  </DisplayString>
+  <DisplayString ElementID="SpectraWay.LogViewer">
+    <Name>Логирование</Name>
+  </DisplayString>
+  <DisplayString ElementID="SpectraWay.Save">
+    <Name>Сохранить</Name>
+  </DisplayString>
+  <DisplayString ElementID="SpectraWay.ExperimentName">
+    <Name>Имя Эксперимента</Name>
+  </DisplayString>
+  <DisplayString ElementID="SpectraWay.Category">
+    <Name>Категория</Name>
+  </DisplayString>
+  <DisplayString ElementID="SpectraWay.PhysicsModel">
+    <Name>Физическая модель</Name>
+  </DisplayString>
+  <DisplayString ElementID="SpectraWay.Spectrometer">
+    <Name>Спектрометер</Name>
+  </DisplayString>
+  <DisplayString ElementID="SpectraWay.WaveRange">
+    <Name>Интервал длин волн</Name>
+  </DisplayString>
+  <DisplayString ElementID="SpectraWay.From">
+    <Name>от</Name>
+  </DisplayString>
+  <DisplayString ElementID="SpectraWay.nm">
+    <Name>нм</Name>
+  </DisplayString>
+  <DisplayString ElementID="SpectraWay.To">
+    <Name>до</Name>
+  </DisplayString>
+  <DisplayString ElementID="SpectraWay.DistanceList">
+    <Name>Список Расстояний</Name>
+  </DisplayString>
+  <DisplayString ElementID="SpectraWay.BaseDistance">
+    <Name>Базовое Расстояние</Name>
+  </DisplayString>
+  <DisplayString ElementID="SpectraWay.Cancel">
+    <Name>Отменить</Name>
+  </DisplayString>
+  <DisplayString ElementID="SpectraWay.CcdLevels">
+    <Name>Уровни ПЗС</Name>
+  </DisplayString>
+  <DisplayString ElementID="SpectraWay.SpectrometerStatus">
+    <Name>Статус спектрометра</Name>
+  </DisplayString>
+  <DisplayString ElementID="SpectraWay.Offline">
+    <Name>Выключен</Name>
+  </DisplayString>
+  <DisplayString ElementID="SpectraWay.Online">
+    <Name>Включен</Name>
+  </DisplayString>
+  <DisplayString ElementID="SpectraWay.Exposure">
+    <Name>Экспозиция</Name>
+  </DisplayString>
+  <DisplayString ElementID="SpectraWay.EnterToSaveNowIsMs">
+    <Name>Текущее значение {0}мс</Name>
+  </DisplayString>
+  <DisplayString ElementID="SpectraWay.RemoveNoise">
+    <Name>Удалить шум</Name>
+  </DisplayString>
+  <DisplayString ElementID="SpectraWay.Normalize">
+    <Name>Нормализация</Name>
+  </DisplayString>
+  <DisplayString ElementID="SpectraWay.Led">
+    <Name>Светодиод</Name>
+  </DisplayString>
+  <DisplayString ElementID="SpectraWay.CurrentDistance">
+    <Name>Текущее Расстояние</Name>
+  </DisplayString>
+  <DisplayString ElementID="SpectraWay.GoToDistance">
+    <Name>Перейти к</Name>
+  </DisplayString>
+  <DisplayString ElementID="SpectraWay.SaveDataAs">
+    <Name>Сохранить данные как</Name>
+  </DisplayString>
+  <DisplayString ElementID="SpectraWay.CurrentL">
+    <Name>Текущее L</Name>
+  </DisplayString>
+  <DisplayString ElementID="SpectraWay.Noise">
+    <Name>Шум</Name>
+  </DisplayString>
+  <DisplayString ElementID="SpectraWay.SpectraForAllDistances">
+    <Name>Автомаматизированные измерения</Name>
+  </DisplayString>
+  <DisplayString ElementID="SpectraWay.ShowSavedData">
+    <Name>Показать сохранённые данные</Name>
+  </DisplayString>
+  <DisplayString ElementID="SpectraWay.No">
+    <Name>Нет</Name>
+  </DisplayString>
+  <DisplayString ElementID="SpectraWay.Yes">
+    <Name>Да</Name>
+  </DisplayString>
+  <DisplayString ElementID="SpectraWay.LogScale">
+    <Name>Логарифмическая шкала</Name>
+  </DisplayString>
+  <DisplayString ElementID="SpectraWay.DivideToBase">
+    <Name>Разделить на базовое</Name>
+  </DisplayString>
+  <DisplayString ElementID="SpectraWay.Desc">
+    <Name>Описание</Name>
+  </DisplayString>
+  <DisplayString ElementID="SpectraWay.NotNoise">
+    <Name>Без Шума</Name>
+  </DisplayString>
+  <DisplayString ElementID="SpectraWay.Normalized">
+    <Name>Нормализовано</Name>
+  </DisplayString>
+  <DisplayString ElementID="SpectraWay.PleaseChooseAction">
+    <Name>Выберите действие</Name>
+  </DisplayString>
+  <DisplayString ElementID="SpectraWay.ShowExperimentList">
+    <Name>Список Экспериментов</Name>
+  </DisplayString>
+  <DisplayString ElementID="SpectraWay.NewExperiment">
+    <Name>Новый Эксперимент</Name>
+  </DisplayString>
+  <DisplayString ElementID="SpectraWay.Export">
+    <Name>Экспорт</Name>
+  </DisplayString>
+  <DisplayString ElementID="SpectraWay.Import">
+    <Name>Импорт</Name>
+  </DisplayString>
+  <DisplayString ElementID="SpectraWay.About">
+    <Name>О нас</Name>
+  </DisplayString>
+  <DisplayString ElementID="SpectraWay.ExperimentListIsEmpty">
+    <Name>Нет сохранённых экспериментов</Name>
+  </DisplayString>
+  <DisplayString ElementID="SpectraWay.AddNewExperiment">
+    <Name>Добавить новый Эксперимент</Name>
+  </DisplayString>
+  <DisplayString ElementID="SpectraWay.SpectraWay">
+    <Name>АСМ1</Name>
+  </DisplayString>
+  <DisplayString ElementID="SpectraWay.LastOperation">
+    <Name>Последняя операция</Name>
+  </DisplayString>
+  <DisplayString ElementID="SpectraWay.ExperimentDialog">
+    <Name>Эксперимент</Name>
+  </DisplayString>
+  <DisplayString ElementID="SpectraWay.Settings">
+    <Name>Настройки</Name>
+  </DisplayString>
+  <DisplayString ElementID="SpectraWay.SettingsDialog">
+    <Name>Настройки</Name>
+  </DisplayString>
+  <DisplayString ElementID="SpectraWay.Language">
+    <Name>Язык</Name>
+  </DisplayString>
+  <DisplayString ElementID="SpectraWay.SavePath">
+    <Name>Путь для сохранения</Name>
+  </DisplayString>
+  <DisplayString ElementID="SpectraWay.Browse">
+    <Name>Обзор</Name>
+  </DisplayString>
+  <DisplayString ElementID="SpectraWay.Initializing">
+    <Name>Инициализация</Name>
+  </DisplayString>
+  <DisplayString ElementID="SpectraWay.Saving">
+    <Name>Сохранение</Name>
+  </DisplayString>
+  <DisplayString ElementID="SpectraWay.PleaseWait">
+    <Name>Пожалуйста, подождите</Name>
+  </DisplayString>
+  <DisplayString ElementID="SpectraWay.AllChangesAreSaved">
+    <Name>Все изменения сохранены</Name>
+  </DisplayString>
+  <DisplayString ElementID="SpectraWay.Experiment_PLACE_WasAdded">
+    <Name>Эксперимент '{0}' добавлен</Name>
+  </DisplayString>
+  <DisplayString ElementID="SpectraWay.AttemptToSetExposureTimeTo_PLACE_Ms">
+    <Name>Попытка установить время экспозиции {0}мс</Name>
+  </DisplayString>
+  <DisplayString ElementID="SpectraWay.ExposureTimeWasSetTo_PLACE_Ms">
+    <Name>Время экспозиции установлено ({0}мс)</Name>
+  </DisplayString>
+  <DisplayString ElementID="SpectraWay.AttemptSetExposureTimeTo_PLACE_MsFailedSpectrometerNotReady">
+    <Name>Невозможно установить время экспозиции {0}мс, Спектрометр не готов к работе</Name>
+  </DisplayString>
+  <DisplayString ElementID="SpectraWay.StartMovingToDistance_PLACE_Mm">
+    <Name>Изменение положения шагового двигателя ({0}мм)</Name>
+  </DisplayString>
+  <DisplayString ElementID="SpectraWay.DataIsEmpty">
+    <Name>Данные отсутствуют</Name>
+  </DisplayString>
+  <DisplayString ElementID="SpectraWay.SpectraForAllDistancesSuccessfullyRecieved">
+    <Name>Спектральные измерения для всех расстояний получены</Name>
+  </DisplayString>
+  <DisplayString ElementID="SpectraWay.RetrieveParamsPleaseWait">
+    <Name>Интерпретация полученных результатов</Name>
+  </DisplayString>
+  <DisplayString ElementID="SpectraWay.PleaseRunSpectrometerAndTryToGetSpectralMeasurements">
+    <Name>Пожалуйста, запустите Спектрометр и получите спектральные измерения</Name>
+  </DisplayString>
+  <DisplayString ElementID="SpectraWay.DistanceDoesNotDefined">
+    <Name>Дистанция не определена</Name>
+  </DisplayString>
+  <DisplayString ElementID="SpectraWay.PleaseMoveDetectorForSomeDistance">
+    <Name>Пожалуйста, определите положение шагового двигателя</Name>
+  </DisplayString>
+  <DisplayString ElementID="SpectraWay.Base">
+    <Name>База</Name>
+  </DisplayString>
+  <DisplayString ElementID="SpectraWay.DataAlreadyExist">
+    <Name>Данные уже были сохранены</Name>
+  </DisplayString>
+  <DisplayString ElementID="SpectraWay.DoYouWantToReplace">
+    <Name>Вы действительно хотите перезаписать уже сохранённые данные</Name>
+  </DisplayString>
+  <DisplayString ElementID="SpectraWay.StepperAssigned">
+    <Name>Шаговый двигатель определён</Name>
+  </DisplayString>
+  <DisplayString ElementID="SpectraWay.StepperIsRestarting">
+    <Name>Шаговый двигатель запускается</Name>
+  </DisplayString>
+  <DisplayString ElementID="SpectraWay.StepperIsStopping">
+    <Name>Шаговый двигатель останавливается</Name>
+  </DisplayString>
+  <DisplayString ElementID="SpectraWay.CurrentDistanceIs_PLACE_Mm">
+    <Name>Текущая Дистанция {0}мм</Name>
+  </DisplayString>
+  <DisplayString ElementID="SpectraWay.StepperFailedSeeLogForDetails">
+    <Name>Ошибка Шагового двигателя, смотрите логирование для получения подробностей</Name>
+  </DisplayString>
+  <DisplayString ElementID="SpectraWay.SpectrometerFailedSeeLogForDetails">
+    <Name>Ошибка Спектрометра, смотрите логирование для получения подробностей</Name>
+  </DisplayString>
+  <DisplayString ElementID="SpectraWay.SpectrometerIsRestarting">
+    <Name>Спектрометр запускается</Name>
+  </DisplayString>
+  <DisplayString ElementID="SpectraWay.SpectrometerIsStopping">
+    <Name>Спектрометр останавливается</Name>
+  </DisplayString>
+  <DisplayString ElementID="SpectraWay.SpectrometerAssigned">
+    <Name>Спектрометр определён</Name>
+  </DisplayString>
+  <DisplayString ElementID="SpectraWay.ConnectToSpectrometerPleaseWait">
+    <Name>Запуск Спектрометра, ожидайте</Name>
+  </DisplayString>
+  <DisplayString ElementID="SpectraWay.LotisSpectrometerCannotBeUsed">
+    <Name>Спектрометр LOTIS TII  GSM 400 не может быть использован</Name>
+  </DisplayString>
+  <DisplayString ElementID="SpectraWay.OrminsCcdCantBeInitialize">
+    <Name>ПЗС Ormins не может быть инициализирована</Name>
+  </DisplayString>
+  <DisplayString ElementID="SpectraWay.OrminsCcdHitTestFailed">
+    <Name>ПЗС Ormins, HitTest не пройден</Name>
+  </DisplayString>
+  <DisplayString ElementID="SpectraWay.OrminsCcdHasIncorrectParams">
+    <Name>ПЗС Ormins, неверные параметры</Name>
+  </DisplayString>
+  <DisplayString ElementID="SpectraWay.RequestedDistanceLessThanMinDistance">
+    <Name>Запрошенная дистанция меньше минимальной</Name>
+  </DisplayString>
+  <DisplayString ElementID="SpectraWay.CurrentDistanceSetAsPossibleMinimalDistance_PLACE_Mm">
+    <Name>Текущая дистанция установлена как наименьшая возможная ({0}мм)</Name>
+  </DisplayString>
+
+</DisplayStrings>

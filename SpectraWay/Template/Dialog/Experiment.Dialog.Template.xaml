@@ -1,0 +1,270 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:viewModels="clr-namespace:SpectraWay.ViewModel"
+                    xmlns:local="clr-namespace:SpectraWay"
+                    xmlns:dialog="clr-namespace:SpectraWay.ViewModel.Dialog"
+                    xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls"
+                    xmlns:dialogs="clr-namespace:MahApps.Metro.Controls.Dialogs;assembly=MahApps.Metro">
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/Localization/StringResourceProvider.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+    <dialogs:CustomDialog x:Key="ExperimentDialog" Title="{Binding Instance[ExperimentDialog].Value, Source={StaticResource StringResourceProvider}}">
+        <Grid Margin="20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="120"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            
+
+            <!--<TextBlock>Experiment Name:</TextBlock>-->
+            <TextBlock Text="{Binding Instance[ExperimentName].Value, Source={StaticResource StringResourceProvider},  StringFormat='\{0\}:'}"/>
+            <TextBox Grid.Row="0" Grid.Column="1" Text="{Binding Name}" />
+
+            <!--<TextBlock Grid.Row="1"
+                   Grid.Column="0"
+                   Margin="0 8 0 0">
+            Category:
+            </TextBlock>-->
+            <TextBlock Grid.Row="1"
+                   Grid.Column="0"
+                   Margin="0 8 0 0" Text="{Binding Instance[Category].Value, Source={StaticResource StringResourceProvider},  StringFormat='\{0\}:'}"/>
+            <ComboBox Grid.Row="1"
+                   Grid.Column="1"
+                          Margin="0 10 0 0"
+                          IsEditable="True"
+                          ItemsSource="{Binding CategoryList}"
+                          SelectedValue="{Binding Category}"
+                          Text="{Binding Category}"
+                          MaxDropDownHeight="125"
+                          Style="{DynamicResource VirtualisedMetroComboBox}"
+                           />
+
+            <!--<TextBlock Grid.Row="2"
+                   Grid.Column="0"
+                   Margin="0 8 0 0">Physics Model:</TextBlock>-->
+            <TextBlock Grid.Row="2"
+                   Grid.Column="0"
+                   Margin="0 8 0 0" Text="{Binding Instance[PhysicsModel].Value, Source={StaticResource StringResourceProvider},  StringFormat='\{0\}:'}"/>
+            <ComboBox Grid.Row="2"
+                   Grid.Column="1"
+                          Margin="0 10 0 0"
+                          IsEditable="False"
+                          ItemsSource="{Binding PhysicModelList}"
+                            
+                          MaxDropDownHeight="125"
+                          SelectedItem="{Binding PhysicModel, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                     
+                          
+                           >
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock>
+                            <TextBlock.Text>
+                                <MultiBinding StringFormat="{}{0}&#x0a;({1})">
+                                    <Binding Path="DisplayName"/>
+                                    <Binding Path="Description"/>
+                                </MultiBinding>
+                            </TextBlock.Text>
+                        </TextBlock>
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+
+            <!--<TextBlock Grid.Row="3"
+                   Grid.Column="0"
+                   Margin="0 8 0 0">Spectrometer:</TextBlock>-->
+            <TextBlock Grid.Row="3"
+                   Grid.Column="0"
+                   Margin="0 8 0 0" Text="{Binding Instance[Spectrometer].Value, Source={StaticResource StringResourceProvider},  StringFormat='\{0\}:'}"/>
+            <ComboBox Grid.Row="3"
+                   Grid.Column="1"
+                          Margin="0 10 0 0"
+                          IsEditable="False"
+                          ItemsSource="{Binding SpectrometerList}"
+                      SelectedIndex="0"
+                          MaxDropDownHeight="125"
+                          SelectedValue="{Binding SpectrometerName}"
+                          Style="{DynamicResource VirtualisedMetroComboBox}"
+                           />
+
+            <!--<TextBlock Grid.Row="4"
+                   Grid.Column="0"
+                   Margin="0 8 0 0">Wave Range:</TextBlock>-->
+            <TextBlock Grid.Row="4"
+                   Grid.Column="0"
+                   Margin="0 8 0 0" Text="{Binding Instance[WaveRange].Value, Source={StaticResource StringResourceProvider},  StringFormat='\{0\}:'}"/>
+
+            <Grid Grid.Row="4"
+                   Grid.Column="1" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.Resources>
+                    <Style x:Key="RangeSliderStyle" TargetType="{x:Type controls:RangeSlider}">
+                        <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+                    </Style>
+                </Grid.Resources>
+                <WrapPanel Orientation="Horizontal" Margin="0 10 0 0">
+                    <TextBlock Margin="5" Text="{Binding Instance[From].Value, Source={StaticResource StringResourceProvider},  StringFormat=' \{0\} '}"/>
+                    <controls:NumericUpDown  HasDecimals="False"  Interval="1" HideUpDownButtons="True" Margin="2" BorderThickness="0" IsReadOnly="True" Value="{Binding WaveMin, UpdateSourceTrigger=Explicit}" FontWeight="Bold">
+                        <controls:NumericUpDown.InputBindings>
+                            <KeyBinding Gesture="Enter" 
+                                Command="{Binding UpdateNumericUpDownBindingOnEnterCommand}"
+                                CommandParameter="{Binding RelativeSource={RelativeSource FindAncestor,AncestorType={x:Type controls:NumericUpDown}}}" />
+                        </controls:NumericUpDown.InputBindings>
+                    </controls:NumericUpDown>
+                    <TextBlock  Margin="5" Text="{Binding Instance[nm].Value, Source={StaticResource StringResourceProvider},  StringFormat=' \{0\}'}"/>
+                    <TextBlock  Margin="5" Text="{Binding Instance[To].Value, Source={StaticResource StringResourceProvider},  StringFormat=' \{0\}'}"/>
+                    <controls:NumericUpDown   HasDecimals="False"  Interval="1" HideUpDownButtons="True" Margin="2" BorderThickness="0" IsReadOnly="True" Value="{Binding WaveMax, UpdateSourceTrigger=Explicit}" FontWeight="Bold">
+                        <controls:NumericUpDown.InputBindings>
+                            <KeyBinding Gesture="Enter" 
+                                Command="{Binding UpdateNumericUpDownBindingOnEnterCommand}"
+                                CommandParameter="{Binding RelativeSource={RelativeSource FindAncestor,AncestorType={x:Type controls:NumericUpDown}}}" />
+                        </controls:NumericUpDown.InputBindings>
+                    </controls:NumericUpDown>
+                    <TextBlock  Margin="5" Text="{Binding Instance[nm].Value, Source={StaticResource StringResourceProvider},  StringFormat=' \{0\}'}"/>
+                </WrapPanel>
+
+                <controls:RangeSlider Grid.Row="1"  Margin="0 0 0 10"
+                                      Focusable="True"
+                                       IsEnabled="False"
+                                          AutoToolTipPlacement="BottomRight"
+                                          IsSnapToTickEnabled="True"
+                                          LowerValue="{Binding WaveMin, UpdateSourceTrigger=PropertyChanged, NotifyOnTargetUpdated=True}"
+                                          Maximum="1100"
+                                          Minimum="350"
+                                          TickFrequency="5"
+                                          TickPlacement="BottomRight"
+                                          UpperValue="{Binding WaveMax, UpdateSourceTrigger=PropertyChanged, NotifyOnTargetUpdated=True}" >
+                    
+                </controls:RangeSlider>
+                </Grid>
+
+            <!--<TextBlock Grid.Row="5"
+                   Grid.Column="0"
+                   Margin="0 8 0 0">Distance List:</TextBlock>-->
+            <TextBlock Grid.Row="5"
+                   Grid.Column="0"
+                   Margin="0 8 0 0" Text="{Binding Instance[DistanceList].Value, Source={StaticResource StringResourceProvider},  StringFormat='\{0\}:'}"/>
+            <Grid Grid.Row="5"
+                   Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <controls:NumericUpDown
+                    IsReadOnly="True"
+                    IsEnabled="False"
+                    Margin="5"
+                                        Delay="1000"
+                                        Speedup="true" 
+                                        HasDecimals="True"
+                                        Interval="0.125"
+                                        controls:TextBoxHelper.UseFloatingWatermark="True"
+                                        controls:TextBoxHelper.Watermark="distance define as mm"
+                                        Value="{Binding DistanceToAdd}" />
+
+                <Button Grid.Row="0" Visibility="Collapsed"
+                   Grid.Column="1" Margin="5"  Padding="15 10"  Style="{DynamicResource SquareButtonStyle}" Command="{Binding AddCurrentDistanceToRangeCommand}"  VerticalAlignment="Stretch" HorizontalAlignment="Stretch" VerticalContentAlignment="Center" HorizontalContentAlignment="Center">Add to Range</Button>
+
+                <ListBox IsEnabled="False" Grid.Row="1"
+                   Grid.Column="0" 
+                         Margin="5"
+                         BorderThickness="1"
+                         Height="120"
+                         ItemsSource="{Binding DistanceRange}"
+                         SelectedItem="{Binding BaseDistance}"
+                         Style="{StaticResource VirtualisedMetroListBox}" />
+            </Grid>
+
+            <!--<TextBlock Grid.Row="6"
+                   Grid.Column="0"
+                   Margin="0 8 0 0">Base Distance:</TextBlock>-->
+            <TextBlock Grid.Row="6"
+                   Grid.Column="0"
+                   Margin="0 8 0 0" Text="{Binding Instance[BaseDistance].Value, Source={StaticResource StringResourceProvider},  StringFormat='\{0\}:'}"/>
+
+
+            <TextBox Grid.Row="6" Margin="5"
+                     BorderThickness="0" FontWeight="Bold"
+                   Grid.Column="1" IsReadOnly="True" Text="{Binding BaseDistance}"/>
+
+            <StackPanel Grid.Row="7"
+                Grid.Column="1" Orientation="Horizontal" Margin="10" >
+                <Button Padding="20 10 20 10" Margin="5"
+                Style="{DynamicResource SquareButtonStyle}"
+                HorizontalAlignment="Left"
+                Command="{Binding DialogAddCommand}" Content="{Binding Instance[Save].Value, Source={StaticResource StringResourceProvider}}" />
+
+                    <Button Padding="20 10 20 10" Margin="5"
+                Style="{DynamicResource SquareButtonStyle}"
+                HorizontalAlignment="Left"
+                Command="{Binding DialogCloseCommand}" Content="{Binding Instance[Cancel].Value, Source={StaticResource StringResourceProvider}}" />
+            </StackPanel>
+        </Grid>
+    </dialogs:CustomDialog>
+
+    <dialogs:CustomDialog x:Key="SettingsDialog" Title="{Binding Instance[SettingsDialog].Value, Source={StaticResource StringResourceProvider}}">
+        <Grid Margin="20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="120"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Text="{Binding Instance[SavePath].Value, Source={StaticResource StringResourceProvider},  StringFormat='\{0\}:'}"/>
+            <StackPanel Grid.Row="0" Grid.Column="1">
+                <TextBox  Text="{Binding SavePath}" />
+                <Button  Command="{Binding DialogBrowseCommand}" Content="{Binding Instance[Browse].Value, Source={StaticResource StringResourceProvider}}"/>
+            </StackPanel>
+            
+
+            <TextBlock Grid.Row="1"
+                   Grid.Column="0"
+                   Margin="0 8 0 0" Text="{Binding Instance[Language].Value, Source={StaticResource StringResourceProvider},  StringFormat='\{0\}:'}"/>
+            <ComboBox Grid.Row="1"
+                   Grid.Column="1"
+                          Margin="0 10 0 0"
+                          IsEditable="False"
+                          ItemsSource="{Binding LanguageList}"
+                          SelectedValue="{Binding Language}"
+                          MaxDropDownHeight="125"
+                          Style="{DynamicResource VirtualisedMetroComboBox}"
+                           />
+
+            <StackPanel Grid.Row="2"
+                Grid.Column="1" Orientation="Horizontal" Margin="10" >
+                <Button Padding="20 10 20 10" Margin="5"
+                Style="{DynamicResource SquareButtonStyle}"
+                HorizontalAlignment="Left"
+                Command="{Binding DialogSaveCommand}" Content="{Binding Instance[Save].Value, Source={StaticResource StringResourceProvider}}" />
+
+                <Button Padding="20 10 20 10" Margin="5"
+                Style="{DynamicResource SquareButtonStyle}"
+                HorizontalAlignment="Left"
+                Command="{Binding DialogCloseCommand}" Content="{Binding Instance[Cancel].Value, Source={StaticResource StringResourceProvider}}" />
+            </StackPanel>
+        </Grid>
+    </dialogs:CustomDialog>
+</ResourceDictionary>
